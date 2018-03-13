@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:background="@color/offWhite"
+    android:background="@color/lightGray"
     android:orientation="vertical"
     tools:context="com.example.diogo.barraqueiro.LoginActivity">
 
@@ -14,6 +14,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <ImageView
             android:id="@+id/imageView"
@@ -67,10 +68,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/prompt_username"
-                        android:textColor="@color/logoBlue"
                         android:inputType="textEmailAddress"
                         android:maxLines="1"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        android:textColor="@color/logoBlue" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -82,14 +83,14 @@
                         android:id="@+id/password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/logoBlue"
                         android:hint="@string/prompt_password"
                         android:imeActionId="6"
                         android:imeActionLabel="@string/action_sign_in_short"
                         android:imeOptions="actionUnspecified"
                         android:inputType="textPassword"
                         android:maxLines="1"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        android:textColor="@color/logoBlue" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -106,6 +107,29 @@
 
             </LinearLayout>
         </ScrollView>
+
+        <TextView
+            android:id="@+id/recuperar"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="380dp"
+            android:clipToPadding="false"
+            android:text="@string/recuperar"
+            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/siteBarraqueiro"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginTop="540dp"
+            android:text="@string/site_barraqueiro"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </android.support.constraint.ConstraintLayout>
 
 

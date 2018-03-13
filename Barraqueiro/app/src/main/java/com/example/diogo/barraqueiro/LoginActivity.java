@@ -19,6 +19,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.text.method.LinkMovementMethod;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -66,6 +67,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        //hypertext
+        TextView rP = (TextView) findViewById(R.id.recuperar);
+        rP.setMovementMethod(LinkMovementMethod.getInstance());
+
+        TextView sB = (TextView) findViewById(R.id.siteBarraqueiro);
+        sB.setMovementMethod(LinkMovementMethod.getInstance());
+
+
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
