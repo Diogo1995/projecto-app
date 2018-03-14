@@ -115,6 +115,7 @@
             android:layout_marginTop="380dp"
             android:clipToPadding="false"
             android:text="@string/recuperar"
+            android:clickable="true"
             app:layout_constraintHorizontal_bias="0.069"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -126,6 +127,7 @@
             android:layout_height="22dp"
             android:layout_marginTop="540dp"
             android:text="@string/site_barraqueiro"
+            android:clickable="true"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
