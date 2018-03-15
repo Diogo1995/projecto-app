@@ -14,6 +14,6 @@
         completions."
     </string>
 
-    <string name="recuperar"><a href="www.barraqueirotransportes.pt">Recuperar palavra-passe</a></string> <!-- ALTERAR!!! GERAR NOVA PW!!! TODO-->
-    <string name="site_barraqueiro"><a href="www.barraqueirotransportes.pt">www.barraqueirotransportes.pt</a></string>
+    <string name="recover_password"><a href="http://google.com">Recuperar palavra-passe</a></string> <!-- ALTERAR!!! GERAR NOVA PW!!! TODO-->
+    <string name="site_barraqueiro"><a href="http://barraqueirotransportes.pt">www.barraqueirotransportes.pt</a></string>
 </resources>

@@ -69,11 +69,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         setContentView(R.layout.activity_login);
 
         //hypertext
-        TextView rP = (TextView) findViewById(R.id.recuperar); //recuperar Passwordv TODO
-        rP.setMovementMethod(LinkMovementMethod.getInstance());
+        TextView recoverPassword = (TextView) findViewById(R.id.recoverPassword);
+        recoverPassword.setMovementMethod(LinkMovementMethod.getInstance());
 
-        TextView sB = (TextView) findViewById(R.id.siteBarraqueiro); //site Barraqueiro TODO
-        sB.setMovementMethod(LinkMovementMethod.getInstance());
+        TextView siteBarraqueiro = (TextView) findViewById(R.id.siteBarraqueiro);
+        siteBarraqueiro.setMovementMethod(LinkMovementMethod.getInstance());
 
 
         // Set up the login form.
