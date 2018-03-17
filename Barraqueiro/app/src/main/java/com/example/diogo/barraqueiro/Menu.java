@@ -17,7 +17,7 @@ public class Menu extends AppCompatActivity {
         String message = intent.getStringExtra(Login.EXTRA_MESSAGE);
 
         // Capture the layout's TextView and set the string as its text
-        TextView textView = findViewById(R.id.testText);
-        textView.setText(message);
+        TextView textView = findViewById(R.id.welcomeMessage);
+        textView.setText(textView.getText() + " " + message);
     }
 }

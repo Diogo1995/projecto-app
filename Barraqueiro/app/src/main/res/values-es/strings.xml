@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Barraqueiro</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">Nombre de usuário</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Entrar</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="error_invalid_username">Nombre de usuário inválido</string>
+    <string name="error_invalid_password">Contraseña muy corta</string>
+    <string name="error_incorrect_password">Contraseña incorrecta</string>
+    <string name="error_field_required">Campo de relleno obrigatório</string>
+    <string name="permission_rationale">"Se requiere permiso de acceso a los contactos"</string>
+    <string name="recover_password"><a href="http://google.com">Recuperar contraseña</a></string> <!-- ALTERAR!!! GERAR NOVA PW!!! TODO-->
+    <string name="site_barraqueiro"><a href="http://barraqueirotransportes.pt">www.barraqueirotransportes.pt</a></string>
+
+    <!-- Strings related to menu -->
+    <string name="welcome">Hola</string>
+    <string name="fill_up_button">Abastecimiento</string>
+    <string name="stats_button">Estadisticas</string>
+    <string name="maps_button">Mapas</string>
+    <string name="contacts_button">Contactos</string>
+    <string name="settings_button">Configuraciones</string>
+    <string name="log_out_button">Salir</string>
+</resources>

@@ -49,7 +49,7 @@ public class Login extends AppCompatActivity implements LoaderManager.LoaderCall
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // makes the textviews go places
+        // Makes the textviews go places
         TextView recoverPassword = (TextView) findViewById(R.id.recoverPassword);
         recoverPassword.setMovementMethod(LinkMovementMethod.getInstance());
         TextView siteBarraqueiro = (TextView) findViewById(R.id.siteBarraqueiro);
