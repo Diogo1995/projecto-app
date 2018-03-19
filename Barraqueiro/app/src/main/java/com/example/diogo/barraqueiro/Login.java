@@ -166,6 +166,9 @@ public class Login extends AppCompatActivity implements LoaderManager.LoaderCall
             Intent intent = new Intent(this, Menu.class);
             intent.putExtra(EXTRA_MESSAGE, username);
             startActivity(intent);
+
+            //animação de login slide_in = nova layout a aparecer na direcção indicada, slide_out = antiga layout sair na direcção indicada
+            overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
         }
     }
 
