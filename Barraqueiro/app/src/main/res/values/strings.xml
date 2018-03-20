@@ -23,13 +23,21 @@
     <string name="settings_button">Definições</string>
     <string name="log_out_button">Sair</string>
 
-    <!-- Strings related to settings-->
+    <!-- Strings related to fill up -->
+    <string name="fill_up">Abastecimento</string>
+
+    <!-- Strings related to stats -->
+    <string name="stats">Estatísticas</string>
+
+    <!-- Strings related to maps -->
+    <string name="maps">Mapas</string>
+
+    <!-- Strings related to contacts -->
+    <string name="contacts">Contactos</string>
+
+    <!-- Strings related to settings -->
     <string name="settings">Definições</string>
-    <string name="darkMode">Modo Escuro</string>
+    <string name="dark_mode">Modo Escuro</string>
     <string name="SIBUnits">Standard International Base Units</string> <!-- metros e isso-->
     <string name="USCUnits">US Constumary Units</string> <!-- gallons e isso-->
-
-
-
-
 </resources>
