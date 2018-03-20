@@ -2,9 +2,11 @@ package com.example.diogo.barraqueiro;
 
 import android.annotation.TargetApi;
 import android.app.LoaderManager;
+import android.content.Context;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
@@ -44,10 +46,17 @@ public class Login extends AppCompatActivity implements LoaderManager.LoaderCall
     private AutoCompleteTextView usernameView;
     private EditText passwordView;
 
+    SharedPreferences sharedpreferences;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        //Gravar login
+        sharedpreferences = getSharedPreferences("Login", Context.MODE_PRIVATE);
+
 
         // Makes the textviews go places
         TextView recoverPassword = (TextView) findViewById(R.id.recoverPassword);
@@ -150,7 +159,7 @@ public class Login extends AppCompatActivity implements LoaderManager.LoaderCall
             focusView = usernameView;
             cancel = true;
         }
-
+7,
         if (cancel) {
             // There was an error; don't attempt login and focus the first
             // form field with an error.
@@ -160,6 +169,14 @@ public class Login extends AppCompatActivity implements LoaderManager.LoaderCall
             // perform the user login attempt.
             mAuthTask = new UserLoginTask(username, password);
             mAuthTask.execute((Void) null);
+
+            //ir buscar ao ficheiro o login anterior
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+
+            editor.putString("Username", username);
+            editor.putString("Password", password);
+            editor.commit();
+
 
             // não sei o que é a linha de cima, a debaixo é a mensagem que queremos passar para a página seguinte
             // TODO ir à base de dados buscar o nome associado ao username e apresentar o menu com "Olá $nome" ?
