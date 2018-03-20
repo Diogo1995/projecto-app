@@ -22,4 +22,11 @@
     <string name="contacts_button">Contactos</string>
     <string name="settings_button">Definições</string>
     <string name="log_out_button">Sair</string>
+
+    <!-- Strings related to settings-->
+    <string name="settings">Definições</string>
+    <string name="darkMode">Modo Escuro</string>
+    <string name="SIBUnits">Standard International Base Units</string> <!-- TODO? metros e isso-->
+    <string name="USCUnits">US Constumary Units</string> <!-- TODO? gallons e isso-->
+
 </resources>
