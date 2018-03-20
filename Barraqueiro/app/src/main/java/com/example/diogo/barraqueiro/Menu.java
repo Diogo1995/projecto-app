@@ -12,8 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class Menu extends AppCompatActivity implements View.OnClickListener {
-
+public class Menu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,64 +22,82 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
         Intent intent = getIntent();
         String message = intent.getStringExtra(Login.EXTRA_MESSAGE);
 
-        // Capture the layout's TextView and set the string as its text
+        // Set the welcome message as the string passed before
         TextView textView = findViewById(R.id.welcomeMessage);
         textView.setText(textView.getText() + " " + message);
 
-
+        // Set the buttons
         ImageButton fillUpIcon = (ImageButton)findViewById(R.id.fillUpButton);
-        fillUpIcon.setOnClickListener(this);
+        fillUpIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fillUpActivity();
+            }
+        });
 
         ImageButton statsIcon = (ImageButton)findViewById(R.id.statsButton);
-        statsIcon.setOnClickListener(this);
+        statsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                statsActivity();
+            }
+        });
 
         ImageButton mapsIcon = (ImageButton)findViewById(R.id.mapsButton);
-        mapsIcon.setOnClickListener(this);
+        mapsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mapsActivity();
+            }
+        });
 
         ImageButton contactsIcon = (ImageButton)findViewById(R.id.contactsButton);
-        contactsIcon.setOnClickListener(this);
+        contactsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contactsActivity();
+            }
+        });
 
         ImageButton settingsIcon = (ImageButton)findViewById(R.id.settingsButton);
-        settingsIcon.setOnClickListener(this);
+        settingsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                settingsActivity();
+            }
+        });
 
         ImageButton logOutIcon = (ImageButton)findViewById(R.id.logOutButton);
-        logOutIcon.setOnClickListener(this);
+        logOutIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
-    @Override
-    public void onClick(View v){
-
-        Intent intent;
-        Button b = (Button) v;
-        if (b.getId() == R.id.fillUpButton) {
-            //intent = new Intent(this, FillUp.class);
-            //startActivity(intent);
-        } else if (b.getId() == R.id.statsButton) {
-            //intent = new Intent(this, Stats.class);
-            //startActivity(intent);
-        } else if (b.getId() == R.id.mapsButton) {
-            //intent = new Intent(this, Maps.class);
-            //startActivity(intent);
-        } else if (b.getId() == R.id.contactsButton) {
-            //intent = new Intent(this, Contacts.class);
-            //startActivity(intent);
-        }else if (b.getId() == R.id.settingsButton) {
-            intent = new Intent(this, Settings.class);
-            startActivity(intent);
-        }else if (b.getId() == R.id.logOutButton) {
-            SharedPreferences sharedpreferences = getSharedPreferences("Login", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedpreferences.edit();
-            editor.clear();
-            editor.commit();
-
-            /*intent = new Intent(this, Login.class);
-
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-            startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_down, R.anim.slide_out_down);
-            finishAffinity();*/
-        }
+    public void fillUpActivity(){
+        Intent in = new Intent(this, FillUp.class);
+        startActivity(in);
     }
 
+    public void statsActivity(){
+        Intent in = new Intent(this, Stats.class);
+        startActivity(in);
+    }
+
+    public void mapsActivity(){
+        Intent in = new Intent(this, Maps.class);
+        startActivity(in);
+    }
+
+    public void contactsActivity(){
+        Intent in = new Intent(this, Contacts.class);
+        startActivity(in);
+    }
+
+    public void settingsActivity(){
+        Intent in = new Intent(this, Settings.class);
+        startActivity(in);
+    }
 }

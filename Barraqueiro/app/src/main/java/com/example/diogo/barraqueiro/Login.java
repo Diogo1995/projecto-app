@@ -290,7 +290,7 @@ public class Login extends AppCompatActivity implements LoaderManager.LoaderCall
             mAuthTask = null;
 
             if (success) {
-                finish();
+                //finish();
             } else {
                 passwordView.setError(getString(R.string.error_incorrect_password));
                 passwordView.requestFocus();
