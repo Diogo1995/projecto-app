@@ -28,9 +28,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Menu"
-            android:parentActivityName=".Login" >
-        </activity>
+        <activity android:name=".Menu" android:parentActivityName=".Login" />
+        <activity android:name=".Settings" android:parentActivityName=".Menu"/>
+
     </application>
 
 </manifest>

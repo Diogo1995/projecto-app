@@ -65,8 +65,8 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
             //intent = new Intent(this, Contacts.class);
             //startActivity(intent);
         }else if (b.getId() == R.id.settingsButton) {
-            //intent = new Intent(this, Settings.class);
-            //startActivity(intent);
+            intent = new Intent(this, Settings.class);
+            startActivity(intent);
         }else if (b.getId() == R.id.logOutButton) {
             SharedPreferences sharedpreferences = getSharedPreferences("Login", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedpreferences.edit();

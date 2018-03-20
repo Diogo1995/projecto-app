@@ -159,7 +159,7 @@ public class Login extends AppCompatActivity implements LoaderManager.LoaderCall
             focusView = usernameView;
             cancel = true;
         }
-7,
+
         if (cancel) {
             // There was an error; don't attempt login and focus the first
             // form field with an error.
