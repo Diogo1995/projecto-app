@@ -24,5 +24,6 @@ public class Settings extends AppCompatActivity {
         else unitsSwitch.setText("@string/SIBUnits"); // displayed text of the Switch whenever it is in unchecked i.e. off state
 
         //TODO gravar posição da switch escolhida!!
+        // TODO teste!
     }
 }
