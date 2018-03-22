@@ -38,6 +38,16 @@
     <!-- Strings related to settings-->
     <string name="settings">Configuraciones</string>
     <string name="dark_mode">Modo Oscuro</string>
-    <string name="SIBUnits">Standard International Base Units</string> <!-- TODO traduzir? metros e isso-->
-    <string name="USCUnits">US Constumary Units</string> <!-- TODO gallons e isso-->
+    <string name="km_button">Kilómetros</string>
+    <string name="mile_button">Millas</string>
+    <string name="l_button">Litros</string>
+    <string name="gal_button">Galónes EE.UU.</string>
+    <string name="distance_preferred_units">Unidades Preferidas - Distancia</string>
+    <string name="volume_preferred_units">Unidades Preferidas - Volumen</string>
+    <string name="language">Idioma</string>
+    <string-array name="language_entries">
+        <item>Portugués</item>
+        <item>Español</item>
+        <item>Inglés</item>
+    </string-array>
 </resources>

@@ -17,12 +17,9 @@ public class Settings extends AppCompatActivity {
         // Ver o estado da switch
         Switch darkModeSwitch = (Switch) findViewById(R.id.darkModeSwitch);
         Boolean darkModeSwitchState = darkModeSwitch.isChecked();
+        // TODO alterar cores
 
-        Switch unitsSwitch = (Switch) findViewById(R.id.unitsSwitch);
-        Boolean unitsSwitchState = unitsSwitch.isChecked();
-        if (unitsSwitchState) unitsSwitch.setText("@string/USCUnits"); // displayed text of the Switch whenever it is in checked or on state
-        else unitsSwitch.setText("@string/SIBUnits"); // displayed text of the Switch whenever it is in unchecked i.e. off state
+        // TODO acrescentar  restantes botões e coisas - https://stackoverflow.com/questions/13377361/how-to-create-a-drop-down-list
 
-        //TODO gravar posição da switch escolhida!!
     }
 }
