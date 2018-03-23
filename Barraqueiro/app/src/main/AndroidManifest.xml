@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/barraqueirologo"
         android:supportsRtl="true"
         android:configChanges="locale"
-        android:theme="@style/Theme"
+        android:theme="@style/DarkTheme"
         >
 
         <activity

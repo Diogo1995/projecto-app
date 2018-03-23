@@ -1,6 +1,9 @@
 package com.example.diogo.barraqueiro;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,9 +21,10 @@ public class Settings extends AppCompatActivity implements AdapterView.OnItemSel
         setContentView(R.layout.activity_settings);
 
         // Ver o estado da switch
+        View container = (View)findViewById(R.id.container);
         Switch darkModeSwitch = (Switch) findViewById(R.id.darkModeSwitch);
         if(darkModeSwitch.isChecked()){
-            // TODO alterar cores
+            //TODO
         }
 
         Spinner languages = findViewById(R.id.languageDropDown);
@@ -35,7 +39,7 @@ public class Settings extends AppCompatActivity implements AdapterView.OnItemSel
     }
 
     public void onNothingSelected(AdapterView<?> parent) {
-        // TODO mostrar idioma default (está a mostrar o o primeiro idioma da lista agora)
+        // TODO mostrar idioma default (está a mostrar o primeiro idioma da lista agora)
     }
 
     public void distanceRadioButtonClicked(View v){
