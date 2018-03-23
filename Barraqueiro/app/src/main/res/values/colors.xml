@@ -9,13 +9,6 @@
     <color name="darkBlue">#2d378f</color>
     <color name="yellow">#f9a53d</color>
     <color name="red">#dd002e</color>
-
-    <!-- Light mode Colors -->
     <color name="lightGray">#efefef</color>
-
-
-    <!-- Dark mode Colors -->
     <color name="darkGray">#363233</color>
-
-
 </resources>

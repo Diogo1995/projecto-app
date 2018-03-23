@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/barraqueirologo"
         android:supportsRtl="true"
         android:configChanges="locale"
-        android:theme="@style/DarkTheme"
+        android:theme="@style/AppTheme.Light"
         >
 
         <activity
@@ -28,11 +28,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Menu" />
-        <activity android:name=".FillUp" />
-        <activity android:name=".Stats" />
-        <activity android:name=".Maps" />
-        <activity android:name=".Contacts"/>
-        <activity android:name=".Settings" />
+        <activity android:name=".Menu"
+            android:parentActivityName=".Login"/>
+        <activity android:name=".FillUp"
+            android:parentActivityName=".Menu" />
+        <activity android:name=".Stats"
+            android:parentActivityName=".Menu" />
+        <activity android:name=".Maps"
+            android:parentActivityName=".Menu" />
+        <activity android:name=".Contacts"
+            android:parentActivityName=".Menu" />
+        <activity android:name=".Settings"
+            android:parentActivityName=".Menu" />
     </application>
 </manifest>

@@ -2,7 +2,6 @@ package com.example.diogo.barraqueiro;
 
 import android.annotation.TargetApi;
 import android.app.LoaderManager;
-import android.content.Context;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
@@ -34,29 +33,41 @@ import java.util.List;
 import static android.Manifest.permission.READ_CONTACTS;
 
 public class Login extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
-
-    public static final String EXTRA_MESSAGE = "com.example.diogo.barraqueiro.MESSAGE";
     private static final int REQUEST_READ_CONTACTS = 0;
 
     private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo@example.com:hello", "bar@example.com:world"
+            "foo:hello", "bar:world"
     };
     private UserLoginTask mAuthTask = null;
 
     private AutoCompleteTextView usernameView;
     private EditText passwordView;
 
-    SharedPreferences sharedpreferences;
+    SharedPreferences loginCredentials;
 
+    private static final String PREFS_NAME = "prefs";
+    private static final String PREF_DARK_THEME = "dark_theme";
+    private static final String LOGIN_CREDENTIALS = "login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        boolean useDarkTheme = preferences.getBoolean(PREF_DARK_THEME, false);
+
+        if(useDarkTheme) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //Gravar login
-        sharedpreferences = getSharedPreferences("Login", Context.MODE_PRIVATE);
-
+        // Get login credentials
+        loginCredentials = getSharedPreferences(LOGIN_CREDENTIALS, MODE_PRIVATE);
+        // TODO loginar sozinho - mas só se existir coisas lá guardadas, sernão ir buscar aos campos de texto
+        // String username = getString("Username", null);
+        // String password = getString("Password", null);
+        // mAuthTask = new userLoginTask() ? com ^
+        // mAuthTask.execute((Void) null);
 
         // Makes the textviews go places
         TextView recoverPassword = (TextView) findViewById(R.id.recoverPassword);
@@ -170,28 +181,26 @@ public class Login extends AppCompatActivity implements LoaderManager.LoaderCall
             mAuthTask = new UserLoginTask(username, password);
             mAuthTask.execute((Void) null);
 
-            //ir buscar ao ficheiro o login anterior
-            SharedPreferences.Editor editor = sharedpreferences.edit();
-
+            // Save the login credentials
+            SharedPreferences.Editor editor = loginCredentials.edit();
             editor.putString("Username", username);
             editor.putString("Password", password);
             editor.commit();
 
-
-            // não sei o que é a linha de cima, a debaixo é a mensagem que queremos passar para a página seguinte
-            // TODO ir à base de dados buscar o nome associado ao username e apresentar o menu com "Olá $nome" ?
+            // Start new activity
             Intent intent = new Intent(this, Menu.class);
-            intent.putExtra(EXTRA_MESSAGE, username);
             startActivity(intent);
 
-            //animação de login slide_in = nova layout a aparecer na direcção indicada, slide_out = antiga layout sair na direcção indicada
+            // slide_in = novo layout a aparecer na direcção indicada, slide_out = antigo layout a sair na direcção indicada
+            // Login animation
             overridePendingTransition(R.anim.slide_in_up, R.anim.slide_out_up);
         }
     }
 
     private boolean isUsernameValid(String username) {
         //TODO: Replace this with your own logic
-        return username.contains("@");
+        return true;
+        //return username.contains("@");
     }
 
     private boolean isPasswordValid(String password) {

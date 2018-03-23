@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-
     android:orientation="vertical"
+    android:background="?attr/backgroundColor"
     tools:context=".Settings">
 
     <TextView
@@ -19,7 +19,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/settings"
-        android:textColor="@color/logoBlue"
+        android:textColor="?attr/pageTitleColor"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,15 +29,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-
-    <!--android:textColor="@color/darkGray"-->
     <Switch
         android:id="@+id/darkModeSwitch"
-        android:layout_width="349dp"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:checked="false"
         android:text="@string/dark_mode"
-
+        android:textColor="?attr/textColor"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +53,7 @@
         android:layout_marginEnd="136dp"
         android:layout_marginTop="8dp"
         android:text="@string/distance_preferred_units"
-        android:textColor="@color/blue"
+        android:textColor="?attr/subTitleColor"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +87,7 @@
             android:checked="true"
             android:onClick="distanceRadioButtonClicked"
             android:text="@string/km_button"
-            android:textColor="@color/darkGray"
+            android:textColor="?attr/textColor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -106,9 +104,9 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_weight="1"
-            android:textColor="@color/darkGray"
-            android:text="@string/mile_button"
             android:onClick="distanceRadioButtonClicked"
+            android:text="@string/mile_button"
+            android:textColor="?attr/textColor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.536"
@@ -125,7 +123,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/volume_preferred_units"
-        android:textColor="@color/blue"
+        android:textColor="?attr/subTitleColor"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -152,6 +150,7 @@
 
         <RadioButton
             android:id="@+id/lButton"
+            android:textColor="?attr/textColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -161,7 +160,6 @@
             android:checked="true"
             android:onClick="volumeRadioButtonClicked"
             android:text="@string/l_button"
-            android:textColor="@color/darkGray"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -170,13 +168,13 @@
 
         <RadioButton
             android:id="@+id/galButton"
+            android:textColor="?attr/textColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_weight="1"
-            android:textColor="@color/darkGray"
             android:text="@string/gal_button"
             android:onClick="distanceRadioButtonClicked"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -196,7 +194,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/language"
-        android:textColor="@color/blue"
+        android:textColor="?attr/subTitleColor"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -207,12 +205,11 @@
 
     <Spinner
         android:id="@+id/languageDropDown"
-        android:layout_width="347dp"
+        android:layout_width="325dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:entries="@string/language"
-        android:textColor="@color/darkGray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintLeft_toLeftOf="parent"
