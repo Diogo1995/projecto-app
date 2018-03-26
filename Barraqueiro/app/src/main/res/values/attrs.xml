@@ -7,5 +7,12 @@
         <attr name="subTitleColor" format="color"></attr>
         <attr name="buttonColor" format="color"></attr>
         <attr name="buttonTextColor" format="color"></attr>
+
+        <attr name="fillup" format="reference"></attr>
+        <attr name="stats" format="reference"></attr>
+        <attr name="maps" format="reference"></attr>
+        <attr name="contacts" format="reference"></attr>
+        <attr name="settings" format="reference"></attr>
+        <attr name="logout" format="reference"></attr>
     </declare-styleable>
 </resources>
