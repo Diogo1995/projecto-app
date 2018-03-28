@@ -50,4 +50,14 @@
         <item>Español</item>
         <item>Inglés</item>
     </string-array>
+    <string name="date_time">Fecha y hora</string>
+    <string name="volume_filled">Volumen abastecido</string>
+    <string name="fuel_type">Combustible</string>
+    <string name="price">Precio</string>
+    <string name="tank_full">Tanque lleno</string>
+    <string name="odometer">Cuentakilómetros</string>
+    <string name="location">Localización</string>
+    <string name="vehicle">Vehículo</string>
+    <string name="vehicle_brand">Marca</string>
+    <string name="vehicle_model">Modelo</string>
 </resources>

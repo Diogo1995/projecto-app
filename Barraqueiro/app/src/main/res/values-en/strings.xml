@@ -50,4 +50,14 @@
         <item>Spanish</item>
         <item>English</item>
     </string-array>
+    <string name="date_time">Date and time</string>
+    <string name="volume_filled">Volume filled</string>
+    <string name="fuel_type">Fuel type</string>
+    <string name="price">Price</string>
+    <string name="tank_full">Full tank</string>
+    <string name="odometer">Odometer</string>
+    <string name="location">Location</string>
+    <string name="vehicle">Vehicle</string>
+    <string name="vehicle_brand">Brand</string>
+    <string name="vehicle_model">Model</string>
 </resources>

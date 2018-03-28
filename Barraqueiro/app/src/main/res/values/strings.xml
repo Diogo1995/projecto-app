@@ -25,6 +25,16 @@
 
     <!-- Strings related to fill up -->
     <string name="fill_up">Abastecimento</string>
+    <string name="date_time">Data e hora</string>
+    <string name="volume_filled">Volume abastecido</string>
+    <string name="fuel_type">Combustível</string>
+    <string name="price">Preço</string>
+    <string name="tank_full">Depósito cheio</string>
+    <string name="odometer">Hodómetro</string>
+    <string name="location">Localização</string>
+    <string name="vehicle">Veículo</string>
+    <string name="vehicle_brand">Marca</string>
+    <string name="vehicle_model">Modelo</string>
 
     <!-- Strings related to stats -->
     <string name="stats">Estatísticas</string>
